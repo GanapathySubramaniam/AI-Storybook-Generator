@@ -67,6 +67,26 @@ class Chat:
     def get_history(self):
         return self.messages
 
+class image_gen_model:
+    def __init__(self):
+        self.openai_client=OpenAI()
+        self.size="1024x1024"
+        self.quality="standard"
+        self.style='natural' 
+        self.edit_image_size='1024x1024'
+
+    def generate_image(self,prompt):
+        response = self.openai_client.images.generate(
+                                                model="dall-e-3",
+                                                prompt=prompt,
+                                                size=self.size,
+                                                quality=self.quality,
+                                                style=self.style,
+                                                n=1,
+                                                response_format='url')
+        image_url = response.data[0].url
+        return image_url
+
 
 
 
