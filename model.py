@@ -72,7 +72,7 @@ class image_gen_model:
         self.openai_client=OpenAI()
         self.size="1024x1024"
         self.quality="standard"
-        self.style='natural' 
+        self.style='vivid' 
         self.edit_image_size='1024x1024'
 
     def generate_image(self,prompt):
