@@ -89,4 +89,9 @@ class image_gen_model:
 
 
 
-
+def tts(prompt):
+    file_name='tts.mp3'
+    openai_client=OpenAI()
+    male_response = openai_client.audio.speech.create(model="tts-1",voice='onyx',input=str(prompt[0]['text']))
+    male_response.write_to_file(f'{file_name}')
+    return file_name
