@@ -46,14 +46,7 @@ The AI-Powered Story Generator allows users to input a story description and rec
 
 ## ⚡ **Getting Started**
 
-### **1. Clone the Repository**
-
-```bash
-git clone https://github.com/yourusername/AI-Story-Generator.git
-cd AI-Story-Generator
-```
-
-### **2. Install Dependencies**
+### **1. Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
@@ -67,7 +60,7 @@ anthropic
 python-dotenv
 ```
 
-### **3. Set Up API Keys**
+### **2. Set Up API Keys**
 
 - Obtain API keys for **OpenAI** and **Anthropic**.
 - Create a `.env` file in the root directory with the following content:
@@ -77,7 +70,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ```
 
-### **4. Launch the Application**
+### **3. Launch the Application**
 
 ```bash
 streamlit run app.py
